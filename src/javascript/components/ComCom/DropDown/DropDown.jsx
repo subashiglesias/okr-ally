@@ -6,7 +6,7 @@ const DropDown = ({className, label = '', defaultValue = '', values = [], onChan
     return (
             <div className='dropdown'>
                 <label htmlFor={className}>{label}</label>
-                <select name={className} onChange={onChange}>
+                <select id={className} name={className} onChange={onChange}>
                     <option value={defaultValue}>All</option>
                     {values.map(value => (
                         <option key={value} value={value}>{value}</option>

@@ -11,10 +11,11 @@ describe('DropDown Component', () => {
     });
 
     test('change values on click', () => {
-        render(<DropDown label="Choose One" defaultValue="All" values={["All", "One", "Two"]}/>);
+        render(<DropDown className="test" label="Choose One" defaultValue="All" values={["All", "One", "Two"]}/>);
         expect(screen.getAllByText('All')).toHaveLength(2);
-        userEvent.click(screen.getByText('One'));
-        expect(screen.getByText('One')).toBeInTheDocument();
+        expect((screen.getAllByText('All')[0]).selected).toBeTruthy();
+        userEvent.selectOptions(screen.getByLabelText('Choose One'), 'One');
+        expect((screen.getAllByText('One')[0]).selected).toBeTruthy();
     })
 
 });
