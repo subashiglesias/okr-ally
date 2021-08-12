@@ -1,3 +1,4 @@
+import React from "react";
 import { render } from '../../../testUtils'
 import { screen } from '@testing-library/react';
 import App from './App';

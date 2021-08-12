@@ -39,7 +39,7 @@ describe('Okr Component', () => {
         expect(screen.queryByText('1. Research and improve customer satisfaction')).not.toBeInTheDocument();
     });
 
-    test('should close sub values on click of button', () => {
+    test('should collapse on click of button near heading', () => {
         render(<Okr dispatch={jest.fn()}/>)
         expect(screen.getByText("Hit quarterly revenue of over $1000000")).toBeInTheDocument();
         userEvent.click(screen.getAllByRole('button')[1]);
