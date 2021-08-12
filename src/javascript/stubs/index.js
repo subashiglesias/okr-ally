@@ -2382,9 +2382,21 @@ const INITIAL_STATE = {
     }
 }
 
-const CHILDREN_MODAL = [<span key={1}><b>id:</b> COM0013</span>, <span key={2}><b>category:</b> Company</span>, <span key={3}><b>title:</b> Conduct 50 phone interviews with top customers</span>]
+const EMPTY_INITIAL_STATE = {
+    okr: {
+        okrResults: {},
+        parentIds: [],
+        parentWithChildren: {},
+        showLoader: false,
+        category: []
+    }
+}
+
+const CHILDREN_MODAL = [<span key={1}><b>id:</b> COM0013</span>, <span key={2}><b>category:</b> Company</span>,
+    <span key={3}><b>title:</b> Conduct 50 phone interviews with top customers</span>]
 
 module.exports = {
     INITIAL_STATE,
+    EMPTY_INITIAL_STATE,
     CHILDREN_MODAL,
 }

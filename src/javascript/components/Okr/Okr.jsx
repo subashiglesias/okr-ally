@@ -38,7 +38,7 @@ const Okr = () => {
                     {renderIfElse(() => category && category.length,
                         () =>
                             <Fragment>
-                                <div className="okr-category">
+                                <div className="okr__category">
                                     {/*A common dropDown component that can be used anywhere*/}
                                     <DropDown className={OKR.category.className} label={OKR.category.label}
                                               defaultValue={OKR.category.defaultValue} values={category}
@@ -46,7 +46,7 @@ const Okr = () => {
                                 </div>
                                 {selectedCategoryList.map((id,index) => <OkrCard key={id} index={index+1} cardData={okrResults[id]} id={id}/>)}
                             </Fragment>,
-                        () => <span className="okr-empty">No Objectives & Key Results Found</span>)}
+                        () => <span className="okr__empty">No Objectives & Key Results Found</span>)}
                 </div>
         )
     )

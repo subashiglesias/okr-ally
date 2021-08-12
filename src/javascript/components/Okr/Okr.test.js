@@ -3,7 +3,7 @@ import {render} from '../../../testUtils';
 import { useSelector } from "react-redux";
 import {screen} from '@testing-library/react';
 import Okr from './Okr';
-import {INITIAL_STATE} from "../../stubs";
+import {INITIAL_STATE, EMPTY_INITIAL_STATE} from "../../stubs";
 import userEvent from "@testing-library/user-event";
 
 
@@ -28,6 +28,13 @@ describe('Okr Component', () => {
         expect(screen.getByText('1. Research and improve customer satisfaction')).toBeInTheDocument();
         //Checking length below because this value exists twice (under another heading - No.42)
         expect(screen.getAllByText('Exceed Net Promoter Score (NPS) of over 8.0')).toHaveLength(2);
+    });
+
+    test('renders error message when okr result is empty', () => {
+        useSelector.mockClear();
+        useSelector.mockImplementation(callback => callback(EMPTY_INITIAL_STATE));
+        render(<Okr dispatch={jest.fn()}/>)
+        expect(screen.getByText('No Objectives & Key Results Found')).toBeInTheDocument();
     });
 
     test('should render only filter values', () => {
