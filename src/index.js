@@ -7,7 +7,7 @@ import rootReducer from './javascript/reducers';
 import rootSaga from "./javascript/saga/root-saga";
 import ErrorBoundary from "./javascript/components/ErrorBoundary";
 
-import './index.css';
+import './index.scss';
 import App from './javascript/components/App';
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose
