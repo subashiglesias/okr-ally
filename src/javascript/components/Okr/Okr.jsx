@@ -39,6 +39,7 @@ const Okr = () => {
                         () =>
                             <Fragment>
                                 <div className="okr-category">
+                                    {/*A common dropDown component that can be used anywhere*/}
                                     <DropDown className={OKR.category.className} label={OKR.category.label}
                                               defaultValue={OKR.category.defaultValue} values={category}
                                               onChange={onCategoryChange}/>

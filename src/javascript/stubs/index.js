@@ -1,5 +1,7 @@
 import React from "react";
 
+//stubs for Fake services or test can added here
+
 const INITIAL_STATE = {
     okr: {
         okrResults: {
