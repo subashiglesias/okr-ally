@@ -8,10 +8,10 @@
         font-weight: 700;
     }
 
-    .child::before {
+    &.child::before {
         content: '__';
         margin-top: -16px;
-        color: gray;
+        color: #808080;
     }
 
     &__avatar {
