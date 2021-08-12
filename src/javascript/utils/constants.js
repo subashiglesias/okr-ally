@@ -1,7 +1,7 @@
 const OKR = {
     category: {
         className: 'Category',
-        label: 'Choose a Category From below',
+        label: 'Choose a Category: ',
         defaultValue: 'All',
 
     }

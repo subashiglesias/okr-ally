@@ -6,24 +6,21 @@ import PropTypes from "prop-types";
 import './Modal.css'
 
 const Modal = ({header ,children, updateModalState}) => {
-    const modalRef = useRef(null);
-
     const onCloseHandler = () => {
         updateModalState();
     };
 
     return ReactDOM.createPortal(
         <div className="modal">
-            <div className="modal-wrapper" ref={modalRef}>
-                <button className="modal-close" onClick={onCloseHandler}>
+            <div className="modal__wrapper">
+                <button className="modal__close" onClick={onCloseHandler}>
                     <img src={Close} alt="close" />
                 </button>
-                <div className="modal-header">
+                <div className="modal__header">
                     <h2>{header}</h2>
                 </div>
-                <hr />
-                <div className="modal-content">{children}</div>
-                <div className="modal-footer">
+                <div className="modal__content">{children}</div>
+                <div className="modal__footer">
                     <button onClick={onCloseHandler}>Cancel</button>
                 </div>
             </div>

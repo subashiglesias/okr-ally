@@ -9,7 +9,7 @@
     display: flex;
 }
 
-.modal .modal-wrapper {
+.modal__wrapper {
     overflow: auto;
     border-radius: 0.5rem;
     position: relative;
@@ -20,7 +20,7 @@
     background-color: #FFF;
 }
 
-.modal .modal-wrapper .modal-close {
+.modal__close {
     position: absolute;
     top: 1rem;
     right: 1rem;
@@ -30,27 +30,39 @@
     cursor: pointer;
 }
 
-.modal .modal-wrapper .modal-header {
+.modal__header {
+    display: flex;
     text-align: center;
-    margin: 0 3rem;
+    padding: 0 2rem;
+    justify-content: center;
+    background-color: #282c34;
+    color: white;
 }
 
-.modal .modal-wrapper .modal-content {
+.modal__content {
     padding: 1.5rem;
     display: flex;
     flex-direction: column;
 }
 
-.modal .modal-wrapper .modal-content span {
+.modal__content span {
     padding: 0.5rem;
 }
 
-.modal .modal-wrapper .modal-footer {
+.modal__content span:nth-child(odd) {
+    background-color: #F7F7F7;
+}
+
+.modal__content span b {
+    text-transform: uppercase;
+}
+
+.modal__footer {
     text-align: center;
     padding: 1rem;
 }
 
-.modal .modal-wrapper .modal-footer button {
+.modal__footer button {
     cursor: pointer;
 }
 
@@ -60,7 +72,7 @@
         width: 100vw;
     }
 
-    .modal .modal-wrapper {
+    .modal__wrapper {
         max-width: unset;
         max-height: 100vh;
     }

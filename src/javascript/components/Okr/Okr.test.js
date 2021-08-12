@@ -22,7 +22,7 @@ describe('Okr Component', () => {
 
     test('renders Okr component', () => {
         render(<Okr dispatch={jest.fn()}/>)
-        expect(screen.getByText('Choose a Category From below')).toBeInTheDocument();
+        expect(screen.getByText('Choose a Category:')).toBeInTheDocument();
         expect(screen.getByText("All")).toBeInTheDocument();
         expect(screen.getAllByRole('button')).toHaveLength(50);
         expect(screen.getByText('1. Research and improve customer satisfaction')).toBeInTheDocument();
@@ -32,10 +32,10 @@ describe('Okr Component', () => {
 
     test('should render only filter values', () => {
         render(<Okr dispatch={jest.fn()}/>)
-        expect(screen.getByText('Choose a Category From below')).toBeInTheDocument();
+        expect(screen.getByText('Choose a Category:')).toBeInTheDocument();
         expect(screen.getByText("All")).toBeInTheDocument();
         expect(screen.getByText('1. Research and improve customer satisfaction')).toBeInTheDocument();
-        userEvent.selectOptions(screen.getByLabelText("Choose a Category From below"), "Finance");
+        userEvent.selectOptions(screen.getByLabelText("Choose a Category:"), "Finance");
         expect(screen.queryByText('1. Research and improve customer satisfaction')).not.toBeInTheDocument();
     });
 

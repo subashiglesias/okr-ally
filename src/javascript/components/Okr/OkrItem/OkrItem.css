@@ -7,9 +7,12 @@
 
 .okr-item.child::before {
     content: '__';
-    margin-top: -5px;
     margin-top: -16px;
     color: gray;
+}
+
+.okr-item:hover {
+    font-weight: 700;
 }
 
 
