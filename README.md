@@ -18,3 +18,8 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
+## Alternatively
+
+Hosted @ https://sad-heisenberg-08e4a2.netlify.app/
+
+second choice , just in case the above doesn't work -> https://humane-accurate-wasabi.glitch.me/ (P.S: might take time to load if the system is waking up)
