@@ -1,0 +1,19 @@
+@import "src/styles/colors";
+
+.App {
+  text-align: center;
+  min-height: 100vh;
+
+  .App-header {
+    background-color: $dark-grey;
+    display: flex;
+    padding-left: 2rem;
+    color: white;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .App {
+    margin-left: -2rem;
+  }
+}

@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from "prop-types";
-import './DropDown.css'
+import './DropDown.scss'
 
 const DropDown = ({className, label = '', defaultValue = '', values = [], onChange}) => {
     return (

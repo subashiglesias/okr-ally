@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import './OkrCard.css'
+import './OkrCard.scss'
 import OkrItem from "../OkrItem";
 import {getOkr} from "../../../utils/redux-selectors";
 import {renderIf} from "../../../utils/helpers";

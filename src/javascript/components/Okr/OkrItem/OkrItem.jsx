@@ -1,6 +1,6 @@
 import React, {Fragment, useState} from 'react';
 import Avatar from '../../../../images/avatar.png'
-import './OkrItem.css';
+import './OkrItem.scss';
 import {renderIf} from "../../../utils/helpers";
 import Modal from "../../ComCom/Modal";
 import PropTypes from "prop-types";

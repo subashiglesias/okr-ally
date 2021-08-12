@@ -1,7 +1,8 @@
+@import "src/styles/colors";
 
 .loader {
     display: flex;
-    color: #282c34;
+    color: $dark-grey;
     font-size: 5.625rem;
     overflow: hidden;
     width: 1em;

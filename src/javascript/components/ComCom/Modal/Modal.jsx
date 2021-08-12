@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import Close from '../../../../images/close.svg'
 import PropTypes from "prop-types";
 
-import './Modal.css'
+import './Modal.scss'
 
 const Modal = ({header ,children, updateModalState}) => {
     const onCloseHandler = () => {

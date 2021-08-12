@@ -1,0 +1,30 @@
+.okr-item {
+    display: flex;
+    padding: 1.2rem 0;
+    align-items: center;
+    cursor: pointer;
+
+    :hover {
+        font-weight: 700;
+    }
+
+    .child::before {
+        content: '__';
+        margin-top: -16px;
+        color: gray;
+    }
+
+    &__avatar {
+        height: 1rem;
+        width: 1rem;
+        border-radius: 50%;
+    }
+
+    &__content {
+        padding-left: 0.5rem;
+    }
+
+    &__child-content {
+        margin-left: 3rem;
+    }
+}

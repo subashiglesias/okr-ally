@@ -2,7 +2,7 @@ import React, {useState, useEffect, Fragment} from 'react';
 import {useSelector, useDispatch} from "react-redux";
 import {getOkrs} from '../../actions'
 
-import './Okr.css'
+import './Okr.scss'
 import {renderIfElse} from "../../utils/helpers";
 import Loader from "../ComCom/Loader";
 import DropDown from "../ComCom/DropDown";
