@@ -20,14 +20,14 @@ const OkrCard = ({cardData, id, index}) => {
         <ol type='a'>
             <div className='okr-card'>
                 <button className={`okr-card__button ${toggle ? (childIds && childIds.length ? 'active' : '') : ''}`} onClick={onToggle}/>
-                <OkrItem data={cardData} id={id} isChild={false} index={index}/>
+                <OkrItem data={cardData} id={id} index={index}/>
             </div>
             {renderIf(() => toggle && childIds,
                 () => {
                     return childIds.map(childId => {
                         return (
                             <div className='okr-card__content' key={childId}>
-                                <OkrItem data={okrResults[childId]} id={childId} isChild={true}
+                                <OkrItem data={okrResults[childId]} id={childId}
                                          parentTitle={cardData.title}/>
                             </div>)
                     })

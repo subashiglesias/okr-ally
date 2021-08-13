@@ -5,14 +5,14 @@ import {renderIf} from "../../../utils/helpers";
 import Modal from "../../ComCom/Modal";
 import PropTypes from "prop-types";
 
-const OkrItem = ({data, id, isChild, index, parentTitle}) => {
+const OkrItem = ({data, id, index, parentTitle}) => {
     const [showModal, setShowModal] = useState(false);
     const title = data && data.title
     return (
         <Fragment>
-            <div className={`okr-item ${isChild ? 'child' : ""}`} onClick={() => setShowModal(true)}>
+            <div className={`okr-item ${parentTitle ? 'child' : ""}`} onClick={() => setShowModal(true)}>
                 <img className="okr-item__avatar" src={Avatar} alt="Ω"/>
-                {!isChild ? <span className='okr-item__content'>{index}. {title}</span>
+                {!parentTitle ? <span className='okr-item__content'>{index}. {title}</span>
                     : <li className='okr-item__child-content' key={id}>{title}</li>
                 }
             </div>
@@ -45,7 +45,6 @@ OkrItem.propTypes = {
         metric_target: PropTypes.string,
         archived: PropTypes.string
     }),
-    isChild: PropTypes.bool,
     id: PropTypes.string,
     index: PropTypes.number,
     parentTitle: PropTypes.string,
